@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.net.Uri
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -10,10 +12,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import com.example.myapplication.databinding.ActivityScrollingBinding
-
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-
 
 
 class ScrollingActivity : AppCompatActivity() {
@@ -30,13 +30,41 @@ class ScrollingActivity : AppCompatActivity() {
            .centerCrop()
            .into(imgView)
     }
+    val ibai = "https://es.wikipedia.org/wiki/Ibai_Llanos"
+    val rafa = "https://es.wikipedia.org/wiki/Rafael_Nadal"
+    val ronaldo = "https://es.wikipedia.org/wiki/Cristiano_Ronaldo"
+    val pique = "https://es.wikipedia.org/wiki/Gerard_Piqu%C3%A9"
+
+    val openURL = Intent(Intent.ACTION_VIEW)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.content.ibai.setOnClickListener{
+           openURL.data = Uri.parse(ibai)
+           startActivity(openURL)
+       }
+
+        binding.content.rafa.setOnClickListener{
+            openURL.data = Uri.parse(rafa)
+            startActivity(openURL)
+        }
+
+        binding.content.ronaldo.setOnClickListener{
+            openURL.data = Uri.parse(ronaldo)
+            startActivity(openURL)
+        }
+
+        binding.content.pique.setOnClickListener{
+            openURL.data = Uri.parse(pique)
+            startActivity(openURL)
+        }
+
 
         image("https://esports.as.com/2022/10/05/league-of-legends/Ibai-anuncio-directo-miercoles-viajando_1617148274_1057116_1440x600.png", binding.content.img)
         image("https://www.elcomercio.com/wp-content/uploads/2022/10/pique-ec-700x391.jpg", binding.content.img2)

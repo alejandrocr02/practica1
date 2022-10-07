@@ -52,6 +52,7 @@
                     android:text="@string/ibai"
                     android:maxLines="3"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ibai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/descripcion"
@@ -103,6 +104,7 @@
                     tools:layout_editor_absoluteX="-16dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/pique"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/descripcion2"
@@ -149,6 +151,7 @@
                     android:text="@string/rafa"
                     android:maxLines="3"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rafa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/descripcion3"
@@ -196,6 +199,7 @@
                     android:text="@string/ronaldo"
                     android:maxLines="3"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ronaldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/descripcion4"
